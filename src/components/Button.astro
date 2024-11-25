@@ -1,5 +1,8 @@
 ---
+// Modtager props fra det sted, hvor knappen bruges.
+const { text = "Tilmeld rejse", width = "200px", height = "60px", bgColor = "bg-orange-500", textColor = "white" } = Astro.props;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<button class={`font-medium rounded-tr-lg rounded-bl-lg shadow hover:opacity-90 transition duration-200 ${bgColor} ${textColor}`} style={`width: ${width}; height: ${height};`}>
+  {text}
+</button>
