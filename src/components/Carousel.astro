@@ -1,12 +1,9 @@
 ---
-import CardsRejser from "../components/CardsRejser.astro";
+
 ---
 
 <article class="overflow-x-auto snap-x snap-mandatory">
-  <div class="flex items-center min-w-full h-full gap-m">
-    <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
-    <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
-    <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
-    <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+  <div class="flex items-center min-w-full h-full gap-lg py-xs">
+    <slot />
   </div>
 </article>
