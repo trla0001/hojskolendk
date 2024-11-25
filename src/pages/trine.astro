@@ -7,15 +7,16 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <section class="relative">
-    <div class="z-0">
-      <video width="1519" height="990" muted loop>
+  <section class="relative grid grid-cols-3 justify-center">
+    <div class="col-span-3 row-span-3 z-0">
+      <video class="w-full h-auto" muted autoplay loop>
         <source src="/hero.mp4" type="video/mp4" />
       </video>
     </div>
-    <article class="z-10">
+    <article class="col-start-2 col-span-1 row-start-1 row-span-1 absolute z-10">
       <img src="/hero-logo.svg" alt="Hojskolendk logo" />
     </article>
+    <div class="col-start-2 col-span-1 row-start-3 row-span-1 absolute z-10"><img src="/hero-arrow.svg" alt="" /></div>
   </section>
 
   <section>
