@@ -5,16 +5,32 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import ForskelCards from "../components/ForskelCards.astro";
+import AnmCards from "../components/AnmCards.astro";
 ---
 
 <MainLayout title="Titel">
-  <section class="grid gap-lg bg-turquoise-200 p-lg">
-    <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>
-    <article class="flex gap-m"></article>
-    <h2 class="text-center pb-m text-turquoise-500">Trustpilot</h2>
-    <p class="pb-xs text-turquoise-800">
+  <section class="bg-turquoise-200 p-lg">
+    <h2 class="text-turquoise-800 pb-m">Anmendelser fra tidligere elever</h2>
+
+    <div class="md:grid grid-cols-3 pb-3xl">
+      <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+    </div>
+
+    <div class="text-center flex flex-row items-end justify-center gap-2">
+      <img src="/icons/star_big.svg" alt="" class="h-8" />
+      <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_half.svg" alt="" class="h-4" />
+    </div>
+
+    <p class="text-left pb-xs text-turquoise-800 md:ml-8xl md:mr-8xl pt-m">
+      <!-- max-w-?? -->
       Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
     </p>
+
     <div class="place-self-center pt-m"><Button>fef</Button></div>
   </section>
 
@@ -26,10 +42,18 @@ import ForskelCards from "../components/ForskelCards.astro";
       <ForskelCards iconforskel="/icons/paw.svg" alt="paw icon" tekst="Vi støtter World Animal Protection, som arbejder for at stoppe dyremishandling, fangenskab og handel med vilde dyr." />
     </div>
   </section>
+
+  <section class="md:grid grid-cols-2 mx-auto bg-turquoise-200 p-lg mt-xl md:pl-8xl pr-8xl gap-8xl">
+    <div>
+      <h2 class="text-turquoise-800 pb-m">FAQ</h2>
+      <p class="text-left text-turquoise-800 pb-s">
+        <!-- max-w-?? -->
+        Her finder du svar på de mest populære spørgsmål
+      </p>
+      <p class="text-left text-turquoise-800 pb-s">
+        <!-- max-w-?? -->
+        Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.
+      </p>
+    </div>
+  </section>
 </MainLayout>
-
-<section class="grid place-items-center m-xl"></section>
-
-<section class="grid grid-cols-2 max-w-5xl mx-auto">
-  <h2>FAQ</h2>
-</section>
