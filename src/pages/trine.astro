@@ -1,14 +1,55 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
+import CardsRejser from "../components/CardsRejser.astro";
+import Accordion from "../components/Accordion.astro";
+import Carousel from "../components/Carousel.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <section>
-    <video src=""></video>
-    hello
+  <section class="relative grid grid-cols-3 items-center">
+    <div class="col-span-3 z-0">
+      <video class="w-full h-auto" muted autoplay loop>
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <article class="col-start-2 col-span-1 absolute z-10">
+      <img src="/hero-logo.svg" alt="Hojskolendk logo" />
+    </article>
+    <div class="col-start-2 col-span-1 absolute z-10 place-self-end pb-lg"><img src="/hero-arrow.svg" alt="" /></div>
   </section>
+
+  <section class="grid place-items-center m-xl">
+    <article class="max-w-xl mx-auto">
+      <h2 class="text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h2>
+      <p class="pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
+      <p class="text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
+      <div class="place-self-center pt-m"><Button>Læs mere om os</Button></div>
+    </article>
+  </section>
+
+  <section class="grid gap-lg bg-turquoise-200 p-lg">
+    <h2 class="text-turquoise-800">Find din rejse</h2>
+    <Carousel>
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+    </Carousel>
+    <div class="place-self-center"><Button>Se alle rejser</Button></div>
+  </section>
+
+  <section class="grid md:grid-cols-2 max-w-5xl mx-auto">
+    <h2>FAQ</h2>
+    <div>
+      <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+      <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+      <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+      <Accordion question="Vacciner" answer="Lorem ipsum" />
+    </div>
+  </section>
+
+  <section></section>
 </MainLayout>

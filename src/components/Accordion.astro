@@ -1,0 +1,13 @@
+---
+const { question = "", answer = "" } = Astro.props;
+---
+
+<details class="group border-b-s border-turquoise-800 text-turquoise-800 py-xs">
+  <summary class="flex items-center justify-between cursor-pointer text-lg font-semibold py-4">
+    {question}
+    <span class="transition-transform group-open:rotate-180">
+      <img src="/arrow-down.svg" alt="Arrow icon" class="w-6 h-6" />
+    </span>
+  </summary>
+  <article class="pt-xs text-turquoise-800">{answer}</article>
+</details>

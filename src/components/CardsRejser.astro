@@ -1,0 +1,17 @@
+---
+const { url = "#", cardimage = "", cardtitle = "", carddestination1 = "", carddestination2 = "", carddestination3 = "" } = Astro.props;
+---
+
+<a href={url} target="_self">
+  <section class="rounded-lg text-white w-[275px] h-[440px] bg-cover bg-center flex flex-col justify-end hover:shadow-drop25" style={cardimage}>
+    <article class="text-center rounded-b-lg pb-sm bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.4)_37.5%,_rgba(0,0,0,0.4)_78.5%)]">
+      <h4>{cardtitle}</h4>
+      <div class="flex justify-between gap-xs pb-sm px-s">
+        <p>{carddestination1}</p>
+        <p>{carddestination2}</p>
+        <p>{carddestination3}</p>
+      </div>
+      <button class="bg-orange-500 rounded-lg px-xs">Læs mere her</button>
+    </article>
+  </section>
+</a>
