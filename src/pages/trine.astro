@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import CardsRejser from "../components/CardsRejser.astro";
 import Accordion from "../components/Accordion.astro";
+import Carousel from "../components/Carousel.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
@@ -48,5 +49,9 @@ import thumbsup from "../assets/images/thumbsup.png";
       <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
       <Accordion question="Vacciner" answer="Lorem ipsum" />
     </div>
+  </section>
+
+  <section>
+    <Carousel />
   </section>
 </MainLayout>
