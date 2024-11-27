@@ -4,13 +4,51 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import logo from "../assets/images/logo.png";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <div class="flex flex-col items-center justify-center min-h-screen">
-      <Button text="Opskrivning" bgColor="bg-orange-500" textColor="text-white" width="250px" height="70px" />
-      <Button text="Opskrivning" bgColor="bg-turquoise-500" textColor="text-white" width="250px" height="70px" />
-    </div>
+  <article class="ml-sm mr-sm">
+    <section>
+      <h3 class="text-medium max-w-6xl mx-auto pb-m">Fællesskab, eventyr og personlig udvikling</h3>
+
+      <h4 class="text-small max-w-6xl mx-auto">Hvorfor skal i vælge os</h4>
+
+      <div class="lg:grid lg:grid-cols-2 gap-lg max-w-6xl mx-auto">
+        <div>
+          <p>
+            HÖJSKOLENDK er en dansk højskole for unge i alderen 18-30 år, hvor du kan opleve både personlig udvikling og fantastiske rejseeventyr sammen <span class="text-turquoise-500 font-semibold">med et fællesskab der støtter dig.</span>
+            <br /><br />
+             Vi er <span class="text-turquoise-500 font-semibold">medlem af Rejsegarantifonden</span>, hvilket sikrer dig en tryg og pålidelig rejseoplevelse. Du rejser sammen med andre unge på din egen alder, samt to danske rejseledere og undervisere, der skaber et trygt og inspirerende fællesskab.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            Vores elever beskriver HÖJSKOLENDK som <span class="text-turquoise-500 font-semibold">"eventyrlige dannelsesrejser med noget på hjerte"</span>. Vores højskoleophold i udlandet handler ikke kun om rejseoplevelser – det handler om at arbejde med dine drømme, mål og ønsker for livet.
+            <br /><br />
+             Gennem inspirerende aktiviteter og udfordringer får du mulighed for at flytte dine grænser og <span class="text-turquoise-500 font-semibold">blive en stærkere version af dig selv</span>. Vi tror på, at du kommer hjem med nyt mod på livet og en større afklaring på, hvad en meningsfuld fremtid betyder for dig.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-18ee19e7-3770-4eb6-95e0-5821c5d03542" data-elfsight-app-lazy></div>
+      </div>
+
+      <div class="flex items-center justify-center pt-lg">
+        <div class="max-w-6xl mx-auto">
+          <h4 class="text-medium">Har du lyst til at vide mere - Kom til infomationsmøde</h4>
+          <p class="max-w-xl pt-m">
+            For at få en endnu bedre forståelse af, hvad HÖJSKOLENDK handler om, inviterer vi dig til at deltage i et af vores informationsmøder.
+            <br /><br />
+             Her kan du møde tidligere elever, få indsigt i undervisningsøvelserne og stille spørgsmål omkring et ophold i udlandet.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center justify-center pt-m">
+        <Button text="Tilmeld infomationsmøde" bgColor="bg-orange-500" textColor="text-white" width="250px" height="50px" />
+      </div>
+    </section>
   </article>
 </MainLayout>

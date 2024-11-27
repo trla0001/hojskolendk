@@ -1,5 +1,22 @@
 ---
+import Button from "./Button.astro";
+import logo from "../assets/images/logo.png";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<nav class="flex items-center justify-between bg-gradient-to-b from-black/80 to-white/0 p-m">
+  <div class="w-xl h-32">
+    <img src="/logo.png" alt="" />
+  </div>
+
+  <div class="flex items-center space-x-lg">
+    <div class="hidden md:flex space-x-lg">
+      <a href="#home" class="text-white hover:text-orange-500 transition duration-200">Find rejse</a>
+      <a href="#about" class="text-white hover:text-orange-500 transition duration-200">Om os</a>
+      <a href="#contact" class="text-white hover:text-orange-500 transition duration-200">Infomøde</a>
+    </div>
+
+    <div>
+      <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
+    </div>
+  </div>
+</nav>
