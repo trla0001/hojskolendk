@@ -23,17 +23,17 @@ import Link from "../components/Link.astro";
   </section>
 
   <section class="grid place-items-center my-xl mx-sm">
-    <article class="md:max-w-xl mx-auto">
-      <h2 class="text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h2>
-      <p class="pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
-      <p class="text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
+    <article class="md:max-w-2xl mx-auto">
+      <h3 class="font-display text-h3_mobile md:text-h3 text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h3>
+      <p class="font-body text-p pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
+      <p class="font-body text-p text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
       <div class="place-self-center pt-m"><Button text="Læs mere om os" textColor="text-white" bgColor="bg-turquoise-400" width="150px" height="50px" /></div>
     </article>
   </section>
 
   <section class="grid gap-lg bg-turquoise-200 py-xl px-sm md:px-xxs overflow-hidden">
     <article class="max-w-lg md:max-w-6xl mx-auto">
-      <h2 class="text-turquoise-800 pb-m">Find din rejse</h2>
+      <h3 class="font-display text-h2_mobile md:text-h2 text-turquoise-800 pb-m">Find din rejse</h3>
       <Carousel>
         <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
         <CardsRejser url="#" cardimage="background-image: url('/card8.png');" cardtitle="Kultur" carddestination1="Bali" carddestination2="Lombok" carddestination3="Gili Island" />
@@ -49,13 +49,13 @@ import Link from "../components/Link.astro";
 
   <article class="ml-sm mr-sm my-xl">
     <section>
-      <h3 class="text-medium max-w-6xl mx-auto pb-m">Fællesskab, eventyr og personlig udvikling</h3>
+      <h3 class="font-display text-h3_mobile md:text-h3 max-w-6xl mx-auto pb-m">Fællesskab, eventyr og personlig udvikling</h3>
 
-      <h4 class="text-small max-w-6xl mx-auto">Hvorfor skal i vælge os</h4>
+      <h4 class="font-display text-h4_mobile md:text-h4 max-w-6xl mx-auto">Hvorfor skal i vælge os</h4>
 
       <div class="lg:grid lg:grid-cols-2 gap-lg max-w-6xl mx-auto">
         <div>
-          <p>
+          <p class="font-body text-p">
             HÖJSKOLENDK er en dansk højskole for unge i alderen 18-30 år, hvor du kan opleve både personlig udvikling og fantastiske rejseeventyr sammen <span class="text-turquoise-500 font-semibold">med et fællesskab der støtter dig.</span>
             <br /><br />
             Vi er <span class="text-turquoise-500 font-semibold">medlem af Rejsegarantifonden</span>, hvilket sikrer dig en tryg og pålidelig rejseoplevelse. Du rejser sammen med andre unge på din egen alder, samt to danske rejseledere og undervisere, der skaber et trygt og inspirerende fællesskab.
@@ -63,7 +63,7 @@ import Link from "../components/Link.astro";
         </div>
 
         <div>
-          <p>
+          <p class="font-body text-p">
             Vores elever beskriver HÖJSKOLENDK som <span class="text-turquoise-500 font-semibold">"eventyrlige dannelsesrejser med noget på hjerte"</span>. Vores højskoleophold i udlandet handler ikke kun om rejseoplevelser – det handler om at arbejde med dine drømme, mål og ønsker for livet.
             <br /><br />
             Gennem inspirerende aktiviteter og udfordringer får du mulighed for at flytte dine grænser og <span class="text-turquoise-500 font-semibold">blive en stærkere version af dig selv</span>. Vi tror på, at du kommer hjem med nyt mod på livet og en større afklaring på, hvad en meningsfuld fremtid betyder for dig.
@@ -77,8 +77,8 @@ import Link from "../components/Link.astro";
 
       <div class="flex items-center justify-center pt-lg">
         <div class="max-w-6xl mx-auto">
-          <h4 class="text-medium">Har du lyst til at vide mere - Kom til infomationsmøde</h4>
-          <p class="max-w-xl pt-m">
+          <h4 class="font-display text-h4_mobile md:text-h4">Har du lyst til at vide mere - Kom til infomationsmøde</h4>
+          <p class="font-body text-p max-w-xl pt-m">
             For at få en endnu bedre forståelse af, hvad HÖJSKOLENDK handler om, inviterer vi dig til at deltage i et af vores informationsmøder.
             <br /><br />
             Her kan du møde tidligere elever, få indsigt i undervisningsøvelserne og stille spørgsmål omkring et ophold i udlandet.
@@ -93,7 +93,7 @@ import Link from "../components/Link.astro";
 
   <section class="bg-turquoise-200 p-lg">
     <section class="grid gap-lg">
-      <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>
+      <h2 class="font-display text-h2_mobile md:text-h2 text-turquoise-800">Anmendelser fra tidligere elever</h2>
       <Carousel>
         <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
         <AnmCards text="Mit højskoleophold har givet mig oplevelser og venner for livet" navn="- Simon Falk" />
@@ -104,7 +104,7 @@ import Link from "../components/Link.astro";
 
       <div class="text-center flex flex-row items-end justify-center gap-2">
         <img src="/icons/star_big.svg" alt="" class="h-8" />
-        <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
+        <h4 class="font-display text-h4_mobile md:text-h4 text-center text-turquoise-500 leading-none">Trustpilot</h4>
         <img src="/icons/star_small.svg" alt="" class="h-4" />
         <img src="/icons/star_small.svg" alt="" class="h-4" />
         <img src="/icons/star_small.svg" alt="" class="h-4" />
@@ -112,7 +112,7 @@ import Link from "../components/Link.astro";
         <img src="/icons/star_half.svg" alt="" class="h-4" />
       </div>
 
-      <p class="text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
+      <p class="font-body text-p text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
         <!-- max-w-?? -->
         Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
       </p>
@@ -122,7 +122,7 @@ import Link from "../components/Link.astro";
   </section>
 
   <section class="my-xl">
-    <h3 class="text-center flex flex-col items-center justify-center text-turquoise-500">Vi gør en forskel</h3>
+    <h3 class="font-display text-h3_mobile md:text-h3 text-center flex flex-col items-center justify-center text-turquoise-500">Vi gør en forskel</h3>
     <div class="md:grid grid-cols-3">
       <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
       <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
@@ -132,9 +132,9 @@ import Link from "../components/Link.astro";
 
   <section class="grid md:grid-cols-2 bg-turquoise-200 p-xl gap-m md:gap-8xl">
     <div>
-      <h2 class="text-turquoise-800 pb-m">FAQ</h2>
-      <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
-      <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
+      <h2 class="font-display text-h2_mobile md:text-h2 text-turquoise-800 pb-m">FAQ</h2>
+      <p class="font-body text-p text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
+      <p class="font-body text-p text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
     </div>
     <div>
       <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
