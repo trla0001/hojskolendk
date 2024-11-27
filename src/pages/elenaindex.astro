@@ -1,0 +1,118 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import Menu from "../components/Menu.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import ForskelCards from "../components/ForskelCards.astro";
+import AnmCards from "../components/AnmCards.astro";
+import Accordion from "../components/Accordion.astro";
+---
+
+<MainLayout title="Titel">
+  <Menu />
+  <section class="bg-turquoise-200 p-lg">
+    <section class="grid gap-lg">
+      <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>
+      <article class="flex gap-m pb-3xl">
+        <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+        <AnmCards text="Mit højskoleophold har givet mig oplevelser og venner for livet" navn="- Simon Falk" />
+        <AnmCards text="Du får en kæmpe oplevelse for livet, som du aldrig vil glemme" navn="- Marie Funder" />
+        <AnmCards text="Et eventyr der vil være med mig resten af livet" navn="- Sarah Sørensen" />
+        <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+      </article>
+    </section>
+
+    <div class="text-center flex flex-row items-end justify-center gap-2">
+      <img src="/icons/star_big.svg" alt="" class="h-8" />
+      <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_small.svg" alt="" class="h-4" />
+      <img src="/icons/star_half.svg" alt="" class="h-4" />
+    </div>
+
+    <p class="text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
+      <!-- max-w-?? -->
+      Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
+    </p>
+
+    <div class="place-self-center pt-m"><Button text="Læs her" bgColor="bg-turquoise-700" textColor="text-white" width="150px" height="50px" /></div>
+  </section>
+
+  <section>
+    <h3 class="text-center flex flex-col items-center justify-center pt-xl text-turquoise-500">Vi gør en forskel</h3>
+    <div class="md:grid grid-cols-3">
+      <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
+      <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
+      <ForskelCards iconforskel="/icons/paw.svg" alt="paw icon" tekst="Vi støtter World Animal Protection, som arbejder for at stoppe dyremishandling, fangenskab og handel med vilde dyr." />
+    </div>
+  </section>
+
+  <section class="md:grid grid-cols-2 mx-auto bg-turquoise-200 p-lg mt-xl md:pl-8xl md:pr-8xl gap-8xl">
+    <div>
+      <h2 class="text-turquoise-800 pb-m">FAQ</h2>
+      <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
+      <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
+    </div>
+    <div>
+      <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+      <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+      <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+      <Accordion question="Vacciner" answer="Lorem ipsum" />
+    </div>
+  </section>
+</MainLayout>
+
+<!-- --- import MainLayout from "../layouts/MainLayout.astro"; 
+ import Button from "../components/Button.astro"; 
+ import CardsRejser from "../components/CardsRejser.astro"; 
+ import Accordion from "../components/Accordion.astro"; 
+ import {Image} from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png"; ---
+
+<MainLayout title="Titel">
+  <section class="relative grid grid-cols-3 justify-center">
+    <div class="col-span-3 row-span-3 z-0">
+      <video class="w-full h-auto" muted autoplay loop>
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <article class="col-start-2 col-span-1 row-start-1 row-span-1 absolute z-10">
+      <img src="/hero-logo.svg" alt="Hojskolendk logo" />
+    </article>
+    <div class="col-start-2 col-span-1 row-start-3 row-span-1 absolute z-10"><img src="/hero-arrow.svg" alt="" /></div>
+  </section>
+
+  <section class="grid place-items-center m-xl">
+    <article class="max-w-xl mx-auto">
+      <h2 class="text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h2>
+      <p class="pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
+      <p class="text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
+      <div class="place-self-center pt-m"><Button>Læs mere om os</Button></div>
+    </article>
+  </section>
+
+  <section class="grid gap-lg bg-turquoise-200 p-lg">
+    <h2 class="text-turquoise-800">Find din rejse</h2>
+    <article class="flex gap-m">
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+      <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+    </article>
+    <div class="place-self-center"><Button>Se alle rejser</Button></div>
+  </section>
+
+  <section class="grid grid-cols-2 max-w-5xl mx-auto">
+    <h2>FAQ</h2>
+    <div>
+      <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+      <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+      <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+      <Accordion question="Vacciner" answer="Lorem ipsum" />
+    </div>
+  </section>
+</MainLayout> -->
