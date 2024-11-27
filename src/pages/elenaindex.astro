@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import ForskelCards from "../components/ForskelCards.astro";
 import AnmCards from "../components/AnmCards.astro";
-// import Accordion from "../components/Accordion.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 
 <MainLayout title="Titel">
@@ -56,6 +56,12 @@ import AnmCards from "../components/AnmCards.astro";
       <h2 class="text-turquoise-800 pb-m">FAQ</h2>
       <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
       <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
+    </div>
+    <div>
+      <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+      <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+      <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+      <Accordion question="Vacciner" answer="Lorem ipsum" />
     </div>
   </section>
 </MainLayout>
