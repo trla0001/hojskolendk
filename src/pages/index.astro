@@ -27,7 +27,7 @@ import Link from "../components/Link.astro";
       <h2 class="text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h2>
       <p class="pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
       <p class="text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
-      <div class="place-self-center pt-m"><Button text="Læs mere om os" textColor="text-white" bgColor="bg-turquoise-400" /></div>
+      <div class="place-self-center pt-m"><Button text="Læs mere om os" textColor="text-white" bgColor="bg-turquoise-400" width="150px" height="50px" /></div>
     </article>
   </section>
 
@@ -41,11 +41,13 @@ import Link from "../components/Link.astro";
         <CardsRejser url="#" cardimage="background-image: url('/card9.png');" cardtitle="Natur" carddestination1="Maldiverne" carddestination2="Bali" carddestination3="Lombok" />
         <CardsRejser url="#" cardimage="background-image: url('/card7.png');" cardtitle="Kultur" carddestination1="Panama" carddestination2="Mexico" carddestination3="Colombia" />
       </Carousel>
-      <div class="place-self-center pt-m"><Button text="Se alle rejser" textColor="text-white" bgColor="bg-turquoise-800" /></div>
+      <div class="place-self-center pt-m">
+        <Button text="Se alle rejser" textColor="text-white" bgColor="bg-turquoise-800" width="150px" height="50px" />
+      </div>
     </article>
   </section>
 
-  <article class="ml-sm mr-sm">
+  <article class="ml-sm mr-sm my-xl">
     <section>
       <h3 class="text-medium max-w-6xl mx-auto pb-m">Fællesskab, eventyr og personlig udvikling</h3>
 
@@ -119,8 +121,8 @@ import Link from "../components/Link.astro";
     </section>
   </section>
 
-  <section>
-    <h3 class="text-center flex flex-col items-center justify-center pt-xl text-turquoise-500">Vi gør en forskel</h3>
+  <section class="my-xl">
+    <h3 class="text-center flex flex-col items-center justify-center text-turquoise-500">Vi gør en forskel</h3>
     <div class="md:grid grid-cols-3">
       <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
       <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
@@ -128,7 +130,7 @@ import Link from "../components/Link.astro";
     </div>
   </section>
 
-  <section class="grid md:grid-cols-2 bg-turquoise-200 p-6xl gap-8xl">
+  <section class="grid md:grid-cols-2 bg-turquoise-200 p-xl gap-8xl">
     <div>
       <h2 class="text-turquoise-800 pb-m">FAQ</h2>
       <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
