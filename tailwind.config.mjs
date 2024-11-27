@@ -77,12 +77,11 @@ export default {
       h3: ["4.0625rem"],
       h4: ["2.5rem"],
       h5: ["2rem"],
-      p: ["1.25rem"],
+      p: ["1.0625rem"],
       h1_mobile: ["3.7rem"],
       h2_mobile: ["3rem"],
       h3_mobile: ["2.375rem"],
       h4_mobile: ["1.875rem"],
-      p_mobile: ["1.0625rem"],
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
