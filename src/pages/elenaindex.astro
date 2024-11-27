@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Menu from "../components/Menu.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import ForskelCards from "../components/ForskelCards.astro";
@@ -10,6 +11,7 @@ import AnmCards from "../components/AnmCards.astro";
 ---
 
 <MainLayout title="Titel">
+  <Menu />
   <section class="bg-turquoise-200 p-lg">
     <section class="grid gap-lg">
       <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>

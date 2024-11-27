@@ -1,0 +1,5 @@
+---
+const { href = "#", target = "_self" } = Astro.props;
+---
+
+<a href={href} class="inline-block hover:underline hover:text-pink hover:scale-110 transition-transform duration-200" target={target}><slot /></a>
