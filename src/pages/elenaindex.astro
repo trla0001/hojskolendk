@@ -8,6 +8,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import ForskelCards from "../components/ForskelCards.astro";
 import AnmCards from "../components/AnmCards.astro";
 import Accordion from "../components/Accordion.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <MainLayout title="Titel">
@@ -15,56 +16,58 @@ import Accordion from "../components/Accordion.astro";
   <section class="bg-turquoise-200 p-lg">
     <section class="grid gap-lg">
       <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>
-      <article class="flex gap-m pb-3xl">
+      <Carousel>
         <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
         <AnmCards text="Mit højskoleophold har givet mig oplevelser og venner for livet" navn="- Simon Falk" />
         <AnmCards text="Du får en kæmpe oplevelse for livet, som du aldrig vil glemme" navn="- Marie Funder" />
         <AnmCards text="Et eventyr der vil være med mig resten af livet" navn="- Sarah Sørensen" />
         <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
-      </article>
+        <AnmCards text="Et eventyr der vil være med mig resten af livet" navn="- Sarah Sørensen" />
+        <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+      </Carousel>
     </section>
-
-    <div class="text-center flex flex-row items-end justify-center gap-2">
-      <img src="/icons/star_big.svg" alt="" class="h-8" />
-      <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
-      <img src="/icons/star_small.svg" alt="" class="h-4" />
-      <img src="/icons/star_small.svg" alt="" class="h-4" />
-      <img src="/icons/star_small.svg" alt="" class="h-4" />
-      <img src="/icons/star_small.svg" alt="" class="h-4" />
-      <img src="/icons/star_half.svg" alt="" class="h-4" />
-    </div>
-
-    <p class="text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
-      <!-- max-w-?? -->
-      Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
-    </p>
-
-    <div class="place-self-center pt-m"><Button text="Læs her" bgColor="bg-turquoise-700" textColor="text-white" width="150px" height="50px" /></div>
   </section>
 
-  <section>
-    <h3 class="text-center flex flex-col items-center justify-center pt-xl text-turquoise-500">Vi gør en forskel</h3>
-    <div class="md:grid grid-cols-3">
-      <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
-      <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
-      <ForskelCards iconforskel="/icons/paw.svg" alt="paw icon" tekst="Vi støtter World Animal Protection, som arbejder for at stoppe dyremishandling, fangenskab og handel med vilde dyr." />
-    </div>
-  </section>
+  <div class="text-center flex flex-row items-end justify-center gap-2">
+    <img src="/icons/star_big.svg" alt="" class="h-8" />
+    <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
+    <img src="/icons/star_small.svg" alt="" class="h-4" />
+    <img src="/icons/star_small.svg" alt="" class="h-4" />
+    <img src="/icons/star_small.svg" alt="" class="h-4" />
+    <img src="/icons/star_small.svg" alt="" class="h-4" />
+    <img src="/icons/star_half.svg" alt="" class="h-4" />
+  </div>
 
-  <section class="md:grid grid-cols-2 mx-auto bg-turquoise-200 p-lg mt-xl md:pl-8xl md:pr-8xl gap-8xl">
-    <div>
-      <h2 class="text-turquoise-800 pb-m">FAQ</h2>
-      <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
-      <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
-    </div>
-    <div>
-      <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
-      <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
-      <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
-      <Accordion question="Vacciner" answer="Lorem ipsum" />
-    </div>
-  </section>
+  <p class="text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
+    <!-- max-w-?? -->
+    Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
+  </p>
+
+  <div class="place-self-center pt-m"><Button text="Læs her" bgColor="bg-turquoise-700" textColor="text-white" width="150px" height="50px" /></div>
 </MainLayout>
+
+<section>
+  <h3 class="text-center flex flex-col items-center justify-center pt-xl text-turquoise-500">Vi gør en forskel</h3>
+  <div class="md:grid grid-cols-3">
+    <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
+    <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
+    <ForskelCards iconforskel="/icons/paw.svg" alt="paw icon" tekst="Vi støtter World Animal Protection, som arbejder for at stoppe dyremishandling, fangenskab og handel med vilde dyr." />
+  </div>
+</section>
+
+<section class="md:grid grid-cols-2 mx-auto bg-turquoise-200 p-lg mt-xl md:pl-8xl md:pr-8xl gap-8xl">
+  <div>
+    <h2 class="text-turquoise-800 pb-m">FAQ</h2>
+    <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
+    <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
+  </div>
+  <div>
+    <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+    <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+    <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+    <Accordion question="Vacciner" answer="Lorem ipsum" />
+  </div>
+</section>
 
 <!-- --- import MainLayout from "../layouts/MainLayout.astro"; 
  import Button from "../components/Button.astro"; 
