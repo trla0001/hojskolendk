@@ -72,20 +72,23 @@ export default {
 
     /* Tilføj dit typografiske hierarki herunder */
     fontSize: {
-      konsultativ: ["0.699rem", { lineHeight: "1.0rem" }],
-      body: ["0.813rem", { lineHeight: "1.25rem" }],
-      base: ["1rem", { lineHeight: "1.5rem" }],
-      small: ["1.5rem", { lineHeight: "2.25rem" }],
-      medium: ["2rem", { lineHeight: "3rem" }],
-      large: ["2.5rem", { lineHeight: "3.75rem" }],
-      xlarge: ["3rem", { lineHeight: "4.5rem" }],
+      h1: ["7rem"],
+      h2: ["5rem"],
+      h3: ["4.0625rem"],
+      h4: ["2.5rem"],
+      h5: ["2rem"],
+      h1_mobile: ["3.7rem"],
+      h2_mobile: ["3rem"],
+      h3_mobile: ["2.375rem"],
+      h4_mobile: ["1.875rem"],
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
     fontWeight: {
-      light: "300",
       regular: "400",
       semibold: "600",
+      bold: "700",
+      ekstrabold: "800",
     },
 
     /* Borders - borderstørrelser herunder */
