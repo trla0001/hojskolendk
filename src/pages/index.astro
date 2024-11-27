@@ -1,6 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import CardsRejser from "../components/CardsRejser.astro";
+import Carousel from "../components/Carousel.astro";
+import ForskelCards from "../components/ForskelCards.astro";
+import AnmCards from "../components/AnmCards.astro";
+import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -8,6 +13,41 @@ import logo from "../assets/images/logo.png";
 ---
 
 <MainLayout title="Titel">
+  <section class="relative grid grid-cols-3 items-center">
+    <div class="col-span-3 z-0">
+      <video class="w-full h-full object-cover" muted autoplay loop>
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <article class="col-start-2 col-span-1 absolute z-10">
+      <img src="/hero-logo.svg" alt="Hojskolendk logo" />
+      <div class="justify-items-center items-end pt-4xl"><img src="/hero-arrow.svg" alt="" /></div>
+    </article>
+  </section>
+
+  <section class="grid place-items-center my-xl mx-xxs">
+    <article class="md:max-w-xl mx-auto">
+      <h2 class="text-center pb-m text-turquoise-500">Højskoleophold i udlandet</h2>
+      <p class="pb-xs text-turquoise-800">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet, og dele et fantastisk rejseeventyr med nye venskaber.</p>
+      <p class="text-turquoise-800">Vi adskiller os fra traditionelle skoler, ved at fokuserer på læring gennem fællesskab og personlig udvikling, samtidig med at du skaber livslange venskaber.</p>
+      <div class="place-self-center pt-m"><Button text="Læs mere om os" textColor="text-white" bgColor="bg-turquoise-400" /></div>
+    </article>
+  </section>
+
+  <section class="grid gap-lg bg-turquoise-200 py-xl px-xxs overflow-hidden">
+    <article class="max-w-lg md:max-w-6xl mx-auto">
+      <h2 class="text-turquoise-800 pb-m">Find din rejse</h2>
+      <Carousel>
+        <CardsRejser url="#" cardimage="background-image: url('/card1.png');" cardtitle="Adventure" carddestination1="Caribien" carddestination2="Hawaii" carddestination3="Mexico" />
+        <CardsRejser url="#" cardimage="background-image: url('/card8.png');" cardtitle="Kultur" carddestination1="Bali" carddestination2="Lombok" carddestination3="Gili Island" />
+        <CardsRejser url="#" cardimage="background-image: url('/card3.png');" cardtitle="Blandet" carddestination1="Australien" carddestination2="Japan" carddestination3="Bali" />
+        <CardsRejser url="#" cardimage="background-image: url('/card9.png');" cardtitle="Natur" carddestination1="Maldiverne" carddestination2="Bali" carddestination3="Lombok" />
+        <CardsRejser url="#" cardimage="background-image: url('/card7.png');" cardtitle="Kultur" carddestination1="Panama" carddestination2="Mexico" carddestination3="Colombia" />
+      </Carousel>
+      <div class="place-self-center pt-m"><Button text="Se alle rejser" textColor="text-white" bgColor="bg-turquoise-800" /></div>
+    </article>
+  </section>
+
   <article class="ml-sm mr-sm">
     <section>
       <h3 class="text-medium max-w-6xl mx-auto pb-m">Fællesskab, eventyr og personlig udvikling</h3>
@@ -19,7 +59,7 @@ import logo from "../assets/images/logo.png";
           <p>
             HÖJSKOLENDK er en dansk højskole for unge i alderen 18-30 år, hvor du kan opleve både personlig udvikling og fantastiske rejseeventyr sammen <span class="text-turquoise-500 font-semibold">med et fællesskab der støtter dig.</span>
             <br /><br />
-             Vi er <span class="text-turquoise-500 font-semibold">medlem af Rejsegarantifonden</span>, hvilket sikrer dig en tryg og pålidelig rejseoplevelse. Du rejser sammen med andre unge på din egen alder, samt to danske rejseledere og undervisere, der skaber et trygt og inspirerende fællesskab.
+            Vi er <span class="text-turquoise-500 font-semibold">medlem af Rejsegarantifonden</span>, hvilket sikrer dig en tryg og pålidelig rejseoplevelse. Du rejser sammen med andre unge på din egen alder, samt to danske rejseledere og undervisere, der skaber et trygt og inspirerende fællesskab.
           </p>
         </div>
 
@@ -27,7 +67,7 @@ import logo from "../assets/images/logo.png";
           <p>
             Vores elever beskriver HÖJSKOLENDK som <span class="text-turquoise-500 font-semibold">"eventyrlige dannelsesrejser med noget på hjerte"</span>. Vores højskoleophold i udlandet handler ikke kun om rejseoplevelser – det handler om at arbejde med dine drømme, mål og ønsker for livet.
             <br /><br />
-             Gennem inspirerende aktiviteter og udfordringer får du mulighed for at flytte dine grænser og <span class="text-turquoise-500 font-semibold">blive en stærkere version af dig selv</span>. Vi tror på, at du kommer hjem med nyt mod på livet og en større afklaring på, hvad en meningsfuld fremtid betyder for dig.
+            Gennem inspirerende aktiviteter og udfordringer får du mulighed for at flytte dine grænser og <span class="text-turquoise-500 font-semibold">blive en stærkere version af dig selv</span>. Vi tror på, at du kommer hjem med nyt mod på livet og en større afklaring på, hvad en meningsfuld fremtid betyder for dig.
           </p>
         </div>
       </div>
@@ -42,7 +82,7 @@ import logo from "../assets/images/logo.png";
           <p class="max-w-xl pt-m">
             For at få en endnu bedre forståelse af, hvad HÖJSKOLENDK handler om, inviterer vi dig til at deltage i et af vores informationsmøder.
             <br /><br />
-             Her kan du møde tidligere elever, få indsigt i undervisningsøvelserne og stille spørgsmål omkring et ophold i udlandet.
+            Her kan du møde tidligere elever, få indsigt i undervisningsøvelserne og stille spørgsmål omkring et ophold i udlandet.
           </p>
         </div>
       </div>
@@ -51,4 +91,58 @@ import logo from "../assets/images/logo.png";
       </div>
     </section>
   </article>
-</MainLayout>
+
+  <section class="bg-turquoise-200 p-lg">
+    <section class="grid gap-lg">
+      <h2 class="text-turquoise-800">Anmendelser fra tidligere elever</h2>
+      <Carousel>
+        <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+        <AnmCards text="Mit højskoleophold har givet mig oplevelser og venner for livet" navn="- Simon Falk" />
+        <AnmCards text="Du får en kæmpe oplevelse for livet, som du aldrig vil glemme" navn="- Marie Funder" />
+        <AnmCards text="Et eventyr der vil være med mig resten af livet" navn="- Sarah Sørensen" />
+        <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
+        <Carousel />
+
+        <div class="text-center flex flex-row items-end justify-center gap-2">
+          <img src="/icons/star_big.svg" alt="" class="h-8" />
+          <h2 class="text-center text-turquoise-500 leading-none">Trustpilot</h2>
+          <img src="/icons/star_small.svg" alt="" class="h-4" />
+          <img src="/icons/star_small.svg" alt="" class="h-4" />
+          <img src="/icons/star_small.svg" alt="" class="h-4" />
+          <img src="/icons/star_small.svg" alt="" class="h-4" />
+          <img src="/icons/star_half.svg" alt="" class="h-4" />
+        </div>
+
+        <p class="text-left pb-xs text-turquoise-800 pt-m max-w-xl mx-auto">
+          <!-- max-w-?? -->
+          Vores tidligere elever beskriver HÖJSKOLENDK som en unik rejse fyldt med fællesskab, udvikling og oplevelser for livet. Læs deres anmeldelser og oplevelser på Trustpilot – og find ud af, hvorfor vi er noget særligt!
+        </p>
+
+        <div class="place-self-center pt-m"><Button text="Læs her" bgColor="bg-turquoise-700" textColor="text-white" width="150px" height="50px" /></div>
+      </Carousel>
+
+      <section>
+        <h3 class="text-center flex flex-col items-center justify-center pt-xl text-turquoise-500">Vi gør en forskel</h3>
+        <div class="md:grid grid-cols-3">
+          <ForskelCards iconforskel="/icons/leaf.svg" alt="leaf icon" tekst="Alle kan gør en forskel. Vi i HÖJSKOLENDK tager ansvar, og gør det vi kan for at passe på vores hjem." />
+          <ForskelCards iconforskel="/icons/tree.svg" alt="tree icon" tekst="Vi planter 50 træer for hver elev der rejser med os på højskoleophold i udlandet." />
+          <ForskelCards iconforskel="/icons/paw.svg" alt="paw icon" tekst="Vi støtter World Animal Protection, som arbejder for at stoppe dyremishandling, fangenskab og handel med vilde dyr." />
+        </div>
+      </section>
+
+      <section class="md:grid grid-cols-2 mx-auto bg-turquoise-200 p-lg mt-xl md:pl-8xl md:pr-8xl gap-8xl">
+        <div>
+          <h2 class="text-turquoise-800 pb-m">FAQ</h2>
+          <p class="text-left text-turquoise-800 pb-s">Her finder du svar på de mest populære spørgsmål</p>
+          <p class="text-left text-turquoise-800 pb-s">Hvis du ikke finder det, du leder efter, er du velkommen til at ringe til os 7027 9007.</p>
+        </div>
+        <div>
+          <Accordion question="Hvad er inkluderet i prisen?" answer="Lorem ipsum" />
+          <Accordion question="Hvordan foregår undervisningen?" answer="Lorem ipsum" />
+          <Accordion question="Rejseforsikring" answer="Lorem ipsum" />
+          <Accordion question="Vacciner" answer="Lorem ipsum" />
+        </div>
+      </section>
+    </section>
+  </section></MainLayout
+>
