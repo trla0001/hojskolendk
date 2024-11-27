@@ -2,8 +2,40 @@
 
 ---
 
-<article class="overflow-x-auto snap-x snap-mandatory">
+<article id="carousel" class="overflow-x-auto snap-x snap-mandatory cursor cursor-slide">
   <div class="flex items-center min-w-full h-full gap-lg py-xs">
     <slot />
   </div>
 </article>
+
+<style>
+  /* Skjul scrollbar, men bevar scroll-funktionalitet */
+  #carousel::-webkit-scrollbar {
+    display: none; /* Skjul scrollbar i Webkit-browsere (Chrome, Safari) */
+  }
+
+  #carousel {
+    -ms-overflow-style: none; /* Skjul scrollbar i Internet Explorer 10+ */
+    scrollbar-width: none; /* Skjul scrollbar i Firefox */
+  }
+</style>
+
+<!-- <div x-data="{ scrollLeft() { $refs.carousel.scrollBy({ left: -300, behavior: 'smooth' }); }, scrollRight() { $refs.carousel.scrollBy({ left: 300, behavior: 'smooth' }); } }" class="relative">
+  <article x-ref="carousel" class="overflow-hidden snap-x snap-center flex items-center">
+    <div class="flex items-center min-w-full h-full gap-m">
+      <slot />
+    </div>
+  </article>
+  <button class="absolute left-xxs top-1/2 -translate-y-1/2 z-10" @click="scrollLeft()"><img src="/arrow-left.svg" alt="" class="w-xs" /></button>
+  <button class="absolute right-xxs top-1/2 -translate-y-1/2 z-10" @click="scrollRight()"><img src="/arrow-right.svg" alt="" class="w-xs" /></button>
+</div> -->
+
+<!-- <div class="flex flex-col items-center overflow-x-auto" x-data="{ scrollLeft() { $refs.carousel.scrollBy({ left: -300, behavior: 'smooth' }); }, scrollRight() { $refs.carousel.scrollBy({ left: 300, behavior: 'smooth' }); } }">
+  <article class="snap-x snap-mandatory">
+    <div class="flex items-center min-w-full h-full gap-lg py-xs">
+      <slot />
+    </div>
+  </article>
+  <button class="-translate-y-1/2" @click="scrollLeft()"><img src="/arrow-down.svg" alt="" /></button>
+  <button class="-translate-y-1/2" @click="scrollRight()"><img src="/arrow-down.svg" alt="" /></button>
+</div> -->

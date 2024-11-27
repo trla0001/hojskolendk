@@ -116,7 +116,11 @@ export default {
       inner50: "0px 4px 4px 0 rgb(0 0 0 / 0.50) inset",
     },
 
-    extend: {},
+    extend: {
+      cursor: {
+        slide: "url(/slide-cursor.svg) 25 25, pointer",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
