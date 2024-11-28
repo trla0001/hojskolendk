@@ -2,20 +2,38 @@
 import Button from "./Button.astro";
 ---
 
-<nav class="flex items-center justify-between bg-gradient-to-b from-black/80 to-white/0 p-m">
-  <div class="w-xl h-32">
-    <img src="/logo.png" alt="" />
-  </div>
-
-  <div class="flex items-center space-x-lg">
-    <div class="hidden md:flex space-x-lg">
-      <a href="#home" class="text-white hover:text-orange-500 transition duration-200">Find rejse</a>
-      <a href="#about" class="text-white hover:text-orange-500 transition duration-200">Om os</a>
-      <a href="#contact" class="text-white hover:text-orange-500 transition duration-200">Infomøde</a>
+<div x-data="{ showmenu: false }" class="p-xs fixed lg:static w-full text-turquoise-800 z-50">
+  <div id="navbar" class="flex flex-row justify-between items-center">
+    <div id="logo" class="flex items-center text-white font-bold">
+      <a href="#index"><img src="/logo.png" alt="HÖJSKOLENDK" class="w-lg" /></a>
     </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <div class="flex flex-row gap-m">
+        <ul class="flex flex-row gap-xs">
+          <li class=""><a href="#">Find din rejse</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+          <li class=""><a href="#">Om os</a></li>
+          <li class=""><a href="#">Infomøde</a></li>
+        </ul>
+        <div>
+          <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
+        </div>
+      </div>
+    </nav>
 
-    <div>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
+      ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-m text-turquoise-800">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobilmenu" class="flex flex-col content-center pt-xs" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul>
+      <li class="text-center py-2"><a href="#">Find din rejse</a></li>
+      <li class="text-center py-2"><a href="#">Om os</a></li>
+      <li class="text-center py-2"><a href="#">Infomøde</a></li>
+    </ul>
+    <div class="flex justify-center">
       <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
