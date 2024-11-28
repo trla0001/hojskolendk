@@ -2,6 +2,6 @@
 const { text = "Tilmeld rejse", width = "100px", height = "30px", bgColor = "bg-orange-500", textColor = "white" } = Astro.props;
 ---
 
-<button class={`hover:shadow-inner25 font-medium rounded-tr-md rounded-bl-md shadow hover:bg-orange-600 transition duration-200 ${bgColor} ${textColor}`} style={`width: ${width}; height: ${height};`}>
+<button class={`font-body font-bold text-p hover:shadow-inner25 font-medium rounded-tr-md rounded-bl-md shadow hover:bg-orange-600 transition duration-200 ${bgColor} ${textColor}`} style={`width: ${width}; height: ${height};`}>
   {text}
 </button>
