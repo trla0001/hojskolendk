@@ -2,11 +2,11 @@
 const { text, navn } = Astro.props;
 ---
 
-<div class="rounded-tr-lg rounded-bl-lg shadow hover:opacity-90 transition duration-200 bg-beige-50 w-[330px] h-[275px] flex-shrink-0 p-sm">
-  <p class="text-left text-orange-500">"</p>
-  <p class="text-center font-body text-turquoise-800 pt-s pb-m">{text}</p>
-  <p class="text-left font-konsultativ text-turquoise-800 pb-s">{navn}</p>
-  <p class="text-right text-orange-500">"</p>
+<div class="rounded-tr-lg rounded-bl-lg shadow hover:opacity-90 transition duration-200 bg-beige-50 w-[330px] h-[275px] flex-shrink-0 p-s">
+  <p class="text-left text-orange-500 font-display text-h4">"</p>
+  <p class="text-center text-turquoise-800 font-body text-p">{text}</p>
+  <p class="text-left font-konsultativ text-turquoise-800 pt-s font-body text-p">{navn}</p>
+  <p class="text-right text-orange-500 font-display text-h4">"</p>
 </div>
 
 <!-- <AnmCards text="At tage med HÖJSKOLENDK, har været den bedste beslutning i mit liv" navn="- Stine R. Hansen" />
